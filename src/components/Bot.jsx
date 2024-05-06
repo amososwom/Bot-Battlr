@@ -19,6 +19,9 @@ function Bot({
             let newData =  selected.filter(value => value.id !== id)
             setSelected(newData)
         }
+        function handleDelete(){
+
+        }
 
     return(
         <>
@@ -27,10 +30,12 @@ function Bot({
                 <img src={avatar_url} alt={name}/>
             </div>
             <div className="botdetails">
-                <span>{name} <FaBeer/> </span>
+                <span>{name} <small>({bot_class})</small> </span>
                 <span>{catchphrase}</span>
             </div>
       <SortBar health={health} damage={damage} armor={armor}/>
+      {!isClicked && 
+      <span className="danger" onClick={handleDelete}>X</span>}
         </div>  
         </>
     )
