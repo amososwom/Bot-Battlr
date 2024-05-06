@@ -122,7 +122,7 @@ nav span{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5em;
+  gap: .6em;
 }
 .botState span {
   padding: .6em 0em;
@@ -130,8 +130,20 @@ nav span{
 }
 .botState span {
   color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
 }
 
+.botState span i {
+  padding: .5em ;
+  border-radius: 50%;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .armycollection {
   width: 100%;
@@ -155,4 +167,35 @@ overflow: hidden;
   grid-auto-flow: row;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.botpage{
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  background: rgb(255,255,255,.2);
+  border-radius: 0.5em;
+  display: grid;
+  place-content: center;
+
+}
+
+.bota {
+  text-decoration: none;
+}
+
+.spec{
+  background-color: grey;
+  border-radius: 0.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.8em ;
+  width: 650px;
+}
+.spec img{
+  border: 1px solid blue;
+  padding: 0.5em;
+  border-radius: 50%;
+  width: 220px;
 }

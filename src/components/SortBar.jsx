@@ -8,8 +8,10 @@ function SortBar({health = 0, damage = 0, armor = 0}) {
     <span><FaHeartbeat className="boticon" /> {health}</span>
     <span><MdElectricBolt className="boticon" /> {damage}</span>
     <span><FaShieldAlt /> {armor}</span>
-</div>
+    </div>
   )
 }
+
+
 
 export default SortBar 

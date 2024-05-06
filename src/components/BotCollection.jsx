@@ -1,12 +1,14 @@
 import React from 'react'
 import Bot from './Bot'
+import { Link } from 'react-router-dom'
 
 function BotCollection( {allBots }) {
 
   
     const myBots = allBots.map(values => 
         (
-         <Bot 
+          <Link to={`/bots/${values.id}`} key={values.id} className="bota">
+                   <Bot 
          key={values.id} 
          id={values.id}
          name={values.name}
@@ -19,6 +21,8 @@ function BotCollection( {allBots }) {
          created_at={values.created_at}
          updated_at={values.updated_at}
          />
+          </Link>
+
         ))
 
   return (

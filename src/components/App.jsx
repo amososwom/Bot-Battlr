@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import YourBotArmy from './YourBotArmy'
 import { Routes, Route} from "react-router-dom"
 import BotCollection from './BotCollection'
+import BotPage from '../pages/BotPage'
 
 import "../App.css"
 
@@ -18,10 +19,11 @@ function App() {
     <>
     <Navbar/>
     <YourBotArmy/>
-    <BotCollection allBots={allBot}/>
-    {/* <Routes> */}
-      {/* <Route path="/" exact component={Home} /> */}
-    {/* </Routes> */}
+
+    <Routes>
+      <Route path="/"  element={<BotCollection allBots={allBot}/>} />
+      <Route path="/bots/:botId"  element={<BotPage allBots={allBot}/>} />
+    </Routes>
     </>
   )
 }
