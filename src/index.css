@@ -3,9 +3,11 @@
   margin: 0;
  box-sizing:  border-box;
  color: #fff;
+ position: relative;
 }
 body{
 width: 100%;
 height: 100vh;
 background: #242424;
 }
+
