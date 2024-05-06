@@ -9,6 +9,7 @@ import "../App.css"
 
 function App() {
   const [allBot, setAllBot] = useState([])
+  const [selected, setSelected] = useState([])
 
   useEffect( () =>{
     fetch('http://localhost:5051/bots')
@@ -18,11 +19,11 @@ function App() {
   return (
     <>
     <Navbar/>
-    <YourBotArmy/>
+    <YourBotArmy selected = {selected} setSelected={setSelected}/>
 
     <Routes>
       <Route path="/"  element={<BotCollection allBots={allBot}/>} />
-      <Route path="/bots/:botId"  element={<BotPage allBots={allBot}/>} />
+      <Route path="/bots/:botId"  element={<BotPage allBots={allBot} selected = {selected} setSelected={setSelected}/>} />
     </Routes>
     </>
   )

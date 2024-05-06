@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import BotSpecs from '../components/BotSpecs'
 
-function BotPage() {
+function BotPage({selected, setSelected}) {
     const  {botId}  = useParams()
     const [specs, setSpecs] = useState({})
 
@@ -11,7 +11,6 @@ function BotPage() {
           .then(res => res.json())
           .then(data => setSpecs(data));
       }, []);
-      console.log(specs)
   return (
     <div className="botpage">
         { <BotSpecs
@@ -25,6 +24,9 @@ function BotPage() {
                  avatar_url={specs.avatar_url}
                  created_at={specs.created_at}
                  updated_at={specs.updated_at}
+                 specs={specs}
+                 selected={selected}
+                 setSelected={setSelected} 
                  />}
     </div>
   )
