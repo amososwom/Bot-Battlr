@@ -9,18 +9,21 @@ function Bot({
     id, name, health, 
     damage, armor, bot_class, catchphrase,
     avatar_url, created_at,
-    updated_at, isClicked, selected, setSelected }) { 
+    updated_at, isClicked, selected, setSelected, setAllBot }) { 
 
         function handleClick(){
             if(!isClicked) {
-                console.log("Not-cliked")
                 return
             }
             let newData =  selected.filter(value => value.id !== id)
             setSelected(newData)
         }
         function handleDelete(){
-
+            fetch(`http://localhost:5051/bots/${id}`,{
+                method: 'DELETE',
+            })
+            setAllBot( prev =>  prev.filter(value => value.id !== id))
+            console.log(name)
         }
 
     return(

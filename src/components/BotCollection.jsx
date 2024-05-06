@@ -2,7 +2,7 @@ import React from 'react'
 import Bot from './Bot'
 import { Link } from 'react-router-dom'
 
-function BotCollection( {allBots }) {
+function BotCollection( {allBots, setAllBot }) {
 
   
     const myBots = allBots.map(values => 
@@ -21,6 +21,7 @@ function BotCollection( {allBots }) {
          created_at={values.created_at}
          updated_at={values.updated_at}
          isClicked = {false}
+         setAllBot = {setAllBot}
          />
           </Link>
 

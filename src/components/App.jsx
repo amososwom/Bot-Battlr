@@ -22,8 +22,8 @@ function App() {
     <YourBotArmy selected = {selected} setSelected={setSelected}/>
 
     <Routes>
-      <Route path="/"  element={<BotCollection allBots={allBot}/>} />
-      <Route path="/bots/:botId"  element={<BotPage allBots={allBot} selected = {selected} setSelected={setSelected}/>} />
+      <Route path="/"  element={<BotCollection allBots={allBot} setAllBot={setAllBot} />}  />
+      <Route path="/bots/:botId"  element={<BotPage allBots={allBot} setAllBot={setAllBot} selected = {selected} setSelected={setSelected}/>} />
     </Routes>
     </>
   )
