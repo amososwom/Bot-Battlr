@@ -20,6 +20,7 @@ function BotCollection( {allBots }) {
          avatar_url={values.avatar_url}
          created_at={values.created_at}
          updated_at={values.updated_at}
+         isClicked = {false}
          />
           </Link>
 

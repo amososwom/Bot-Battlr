@@ -22,7 +22,10 @@ function YourBotArmy({selected, setSelected}) {
         avatar_url={bot.avatar_url}
         created_at={bot.created_at}
         updated_at={bot.updated_at}  
-        setSelected={setSelected}  />)
+        isClicked = {true}
+        selected={selected}
+        setSelected={setSelected} 
+        />)
 }            </div>
         </div>
     )

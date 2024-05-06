@@ -66,6 +66,7 @@ nav span{
   grid-gap: 0.9em;
   grid-auto-flow: column;
   padding: .9em 0;
+  place-content: start;
 }
 
 .bot {
